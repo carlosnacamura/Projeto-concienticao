@@ -1,0 +1,125 @@
+body {
+
+  background-color: rgb(72, 85, 85);
+
+
+}
+
+header {
+
+  background-color: black;
+  position: fixed;
+  height: 20vh;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+footer {
+
+  background-color: black;
+  height: 20vh;
+  position: fixed;
+
+
+}
+
+.form {
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 40vw;
+  height: 40vh;
+  background-color: black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+
+
+}
+
+.title1 {
+
+  color: azure;
+
+}
+
+.title2 {
+
+  display: flex;
+  margin: 0px;
+  color: black;
+
+
+
+
+}
+
+.container {
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 40vh;
+  width: 40vw;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgba(41, 73, 179, 0.932);
+  border-radius: 13px;
+
+
+
+}
+
+#peso,
+#altura {
+
+  display: flex;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 7px;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+
+}
+
+.resultado1,
+.resultado2 {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 10vw;
+  height: 10vh;
+  background-color: azure;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+
+}
+
+.enviarXresetar {
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+#reset,
+#submit {
+
+  display: flex;
+  margin: 10px;
+  border-radius: 6px;
+  height: 4vh;
+  width: 6vw;
+  align-items: center;
+  justify-content: center;
+
+
+}
