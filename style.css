@@ -1,8 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* Color Theme in Hex */
+  --dark: #3B3B40;
+  --dark_shade: #A66963;
+  --main: #BFB850;
+  --light_accent: #A1A6A4;
+  --light_shade: #F2F2F2;
+  /*font theme*/
+  --default-font: 'Rajdhani', sans-serif;
+}
+
 body {
 
-  background-color: rgb(72, 85, 85);
+  background-color: var(--light_shade);
 
 
+}
+
+.main>h1 {
+  align-self: center;
+  padding: 1vw;
+}
+
+header.main {
+  background-image: linear-gradient(10deg, #BFB850, #d4ce75);
+  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.082);
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  width: 100vw;
+  height: 12vh;
+
+  color: var(--light_shade);
+  text-shadow: 0.1vh 0.1vh 1vh rgba(0, 0, 0, 0.349);
+  font-family: var(--default-font);
+  font-size: 2.5vh;
+}
+
+header li {
+  list-style: none;
+  display: inline-flex;
+}
+
+li a {
+  font-family: var(--default-font);
+  color: var(--light_shade);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1vw;
+}
+
+li a:hover {
+  background-color: var(--light_accent);
+  border-radius: 1vw;
+  transition: .125s .125s;
 }
 
 header {
@@ -10,8 +71,6 @@ header {
   background-color: black;
   position: fixed;
   height: 20vh;
-  margin: 0px;
-  padding: 0px;
 
 }
 
@@ -28,7 +87,7 @@ footer {
 
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
   width: 40vw;
@@ -39,6 +98,26 @@ footer {
   padding: 5px;
 
 
+}
+
+input {
+  width: 35%;
+  box-sizing: border-box;
+  transition: width .125s;
+}
+
+input:focus {
+  width: 95%;
+}
+
+.enviarXresetar {
+  width: 100%;
+}
+
+input[type="submit"],
+[type="reset"] {
+  display: block;
+  padding: 3vw;
 }
 
 .title1 {
