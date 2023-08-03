@@ -8,7 +8,7 @@
 
 :root {
   /* Color Theme in Hex */
-  --dark: #3B3B40;
+  --dark: #62626b;
   --dark_shade: #A66963;
   --main: #BFB850;
   --light_accent: #A1A6A4;
@@ -17,11 +17,19 @@
   --default-font: 'Rajdhani', sans-serif;
 }
 
+/*dark:3B3B40*/
 body {
 
   background-color: var(--light_shade);
 
 
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main>h1 {
@@ -84,7 +92,7 @@ footer {
 }
 
 .form {
-
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -92,18 +100,24 @@ footer {
   flex-direction: column;
   width: 40vw;
   height: 40vh;
-  background-color: black;
+  background-color: var(--dark);
   border-radius: 10px;
   margin: 10px;
   padding: 5px;
+  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.082);
+  min-width: 300px;
+
+
 
 
 }
 
 input {
   width: 35%;
-  box-sizing: border-box;
+  height: 2vh;
   transition: width .125s;
+  font-weight: lighter;
+  font-size: 100%;
 }
 
 input:focus {
@@ -114,15 +128,50 @@ input:focus {
   width: 100%;
 }
 
+.container-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
 input[type="submit"],
 [type="reset"] {
+  font-weight: bold;
+  font-size: 120%;
+  color: var(--light_shade);
+  text-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.192);
+  border-radius: 1vw;
   display: block;
-  padding: 3vw;
+  padding: 1vw;
+  text-align: center;
+  box-sizing: content-box;
+  margin: 1vw;
+}
+
+input[type="submit"] {
+  background-color: #d4ce75;
+}
+
+input[type="submit"]:hover {
+  background-color: #c2bc6c;
+  box-shadow: 1vh 1vh 1vh #c2bc6c17;
+  transition: width .125s .125s, box-shadow .125s .125s;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  background-color: #d47575;
+}
+
+input[type="reset"]:hover {
+  background-color: #c26c6c;
+  box-shadow: 1vh 1vh 1vh #c26c6c17;
+  cursor: pointer;
 }
 
 .title1 {
-
-  color: azure;
+  color: var(--light_shade);
+  margin: 1vw;
 
 }
 
@@ -146,8 +195,10 @@ input[type="submit"],
   width: 40vw;
   margin: 10px;
   padding: 5px;
-  background-color: rgba(41, 73, 179, 0.932);
+  background-color: var(--dark_shade);
   border-radius: 13px;
+  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.082);
+  min-width: 300px;
 
 
 
@@ -186,19 +237,5 @@ input[type="submit"],
 
   display: flex;
   flex-direction: row;
-
-}
-
-#reset,
-#submit {
-
-  display: flex;
-  margin: 10px;
-  border-radius: 6px;
-  height: 4vh;
-  width: 6vw;
-  align-items: center;
-  justify-content: center;
-
 
 }
