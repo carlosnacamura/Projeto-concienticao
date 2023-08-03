@@ -1,27 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-* {
+*,
+body,
+html {
   margin: 0px;
   padding: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--default-font)
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden !important;
+}
+
+::-webkit-scrollbar {
+  width: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--purple-main-0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--purple-shades-50);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.527);
 }
 
 :root {
-  /* Color Theme in Hex */
-  --dark: #62626b;
-  --dark_shade: #A66963;
-  --main: #BFB850;
-  --light_accent: #A1A6A4;
+  --gold-tints-25: #ede37c;
+  --gold-tints-50: #f3eca8;
+  --gold-tints-75: #f9f5d3;
+  --gold-main-0: #e8da51;
+  --gold-shades-50: #746d28;
+  --gold-shades-75: #3a3614;
+  /*complemendar*/
+  --purple-tints-50: #a8aff3;
+  --purple-tints-75: #d3d7f9;
+  --purple-main-0: #515fe8;
+  --purple-shades-50: #282f74;
+  --purple-shades-75: #14173a;
+
+
   --light_shade: #F2F2F2;
+  --dark: #212125;
   /*font theme*/
   --default-font: 'Rajdhani', sans-serif;
 }
 
+:root {}
+
 /*dark:3B3B40*/
 body {
 
-  background-color: var(--light_shade);
-
+  background-color: var(--dark);
 
 }
 
@@ -38,12 +74,12 @@ main {
 }
 
 header.main {
-  background-image: linear-gradient(10deg, #BFB850, #d4ce75);
-  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.082);
+  background-image: linear-gradient(10deg, var(--gold-main-0), var(--gold-tints-25));
+  box-shadow: 0.1vh 0.1vh 1vh rgba(255, 255, 255, 0.411);
   position: relative;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 
   width: 100vw;
@@ -69,7 +105,7 @@ li a {
 }
 
 li a:hover {
-  background-color: var(--light_accent);
+  background-color: var(--gold-shades-50);
   border-radius: 1vw;
   transition: .125s .125s;
 }
@@ -83,13 +119,23 @@ header {
 }
 
 footer {
-
+  color: var(--light_shade);
   background-color: black;
+
   height: 20vh;
-  position: fixed;
+  width: 100vw;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0.1vh 0.1vh 1vh rgba(255, 255, 255, 0.13);
 
 
 }
+
+footer>h1 {}
 
 .form {
   font-family: Arial, Helvetica, sans-serif;
@@ -100,11 +146,11 @@ footer {
   flex-direction: column;
   width: 40vw;
   height: 40vh;
-  background-color: var(--dark);
+  background-image: linear-gradient(80deg, var(--purple-main-0), rgba(0, 0, 0, 0));
   border-radius: 10px;
   margin: 10px;
   padding: 5px;
-  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.082);
+  box-shadow: 0.1vh 0.1vh 1vh rgba(0, 0, 0, 0.082);
   min-width: 300px;
 
 
@@ -139,7 +185,7 @@ input[type="submit"],
   font-weight: bold;
   font-size: 120%;
   color: var(--light_shade);
-  text-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.192);
+  text-shadow: 0.1vh 0.1vh 1vh rgba(0, 0, 0, 0.192);
   border-radius: 1vw;
   display: block;
   padding: 1vw;
@@ -149,23 +195,24 @@ input[type="submit"],
 }
 
 input[type="submit"] {
-  background-color: #d4ce75;
+  background-color: var(--purple-shades-50);
 }
 
 input[type="submit"]:hover {
-  background-color: #c2bc6c;
-  box-shadow: 1vh 1vh 1vh #c2bc6c17;
+  background-color: var(--purple-shades-75);
+  box-shadow: 0.1vh 0.1vh 0.7vh var(--purple-tints-50);
   transition: width .125s .125s, box-shadow .125s .125s;
   cursor: pointer;
 }
 
 input[type="reset"] {
-  background-color: #d47575;
+  background-color: transparent;
 }
 
 input[type="reset"]:hover {
-  background-color: #c26c6c;
-  box-shadow: 1vh 1vh 1vh #c26c6c17;
+  background-color: rgba(0, 0, 0, 0.13);
+  box-shadow: 0.1vh 0.1vh 1vh var(--purple-tints-50);
+  transition: width .125s .125s, box-shadow .125s .125s;
   cursor: pointer;
 }
 
@@ -195,9 +242,9 @@ input[type="reset"]:hover {
   width: 40vw;
   margin: 10px;
   padding: 5px;
-  background-color: var(--dark_shade);
+  background-image: linear-gradient(222deg, var(--purple-main-0), var(--purple-shades-50));
   border-radius: 13px;
-  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.082);
+  box-shadow: 0.1vh 0.1vh 1vh rgba(0, 0, 0, 0.082);
   min-width: 300px;
 
 

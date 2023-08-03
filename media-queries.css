@@ -1,0 +1,31 @@
+@media screen and (max-width:320px) {
+    body {}
+
+    .main {
+        height: 1vh;
+        align-items: flex-end;
+    }
+
+    .main>h1 {
+        font-size: 4vh;
+        align-items: flex-end;
+    }
+
+    header li {
+        font-size: 3vh;
+    }
+
+    input[type="submit"],
+    [type="reset"] {
+        font-weight: bold;
+        font-size: 120%;
+        color: var(--light_shade);
+        text-shadow: 0.1vh 0.1vh 1vh rgba(0, 0, 0, 0.192);
+        border-radius: 1vh;
+        display: block;
+        padding: 1.3vh;
+        text-align: center;
+        box-sizing: content-box;
+        margin: 1vw;
+    }
+}
